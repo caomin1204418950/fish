@@ -16,13 +16,12 @@
                 </div>
 							</router-link>
             </div>
-						<router-link to="/publish" class="tab_mid">
+						<router-link to="/publish" class="tab_mid router_link">
 								<div class="border">
 										<div class="push">
-											<div class="pushRow"></div>
-											<div class="pushClown"></div>
+											<img src="@/assets/add.png" alt="">
 										</div>
-									</div>
+								</div>
 									<div class="pushText">
 										发布
 									</div>
@@ -72,38 +71,35 @@ export default {
     text-decoration: none;
 		color: black;
 }
-.pushRow{
-	width: 20px;
-	height: 1.5px;
-	background-color: black
+.img_box {
+	width: 1.5rem;
+	height: 1.5rem;
+	background-color: greenyellow
 }
-.pushClown{
-	width: 1.5px;
-	height: 20px;
-	background-color: black;
-	position: absolute;
-	z-index: 2
+img{
+	width: 0.8rem;
+	height: 0.8rem;
 }
+
 .tabarContainer {
-  width: 100%;
-  height: 110px;
+  width: 10rem;
+  height: 3rem;
 	/* background-color: red; */
   position: fixed;
   bottom: 0;
 }
 .tabar {
-  width: 100%;
-  height: 70px;
-	margin-top: 40px;
-  background-color: white;
-	border-top: 2px solid #f4f4f4;
-  display: flex;
+  width: 10rem;
+  height: 2.3rem;
+	margin-top: 0.7rem;
+  /* background-color: green; */
+	display: flex;
   flex-direction: row;
   align-items: center;
-	font-size: 15px;
+	border-top: 2px solid #f4f4f4;
 }
 .tab_left {
-	width: 40%;
+	width: 4rem;
 	height: 100%;
 	/* background-color: red;	 */
   display: flex;
@@ -111,29 +107,37 @@ export default {
   align-items: center;
 }
 .xianYu{
-	width: 50%;
+	width: 2rem;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 .yuTang{
-	width: 50%;
+	width: 2rem;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	/* background-color: yellow; */
 }
+.tab_right{
+	width: 4rem;
+	height: 100%;
+	/* background-color: red;	 */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .xiaoXi{
-	width: 50%;
+	width: 2rem;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 .woDe{
-	width: 50%;
+	width: 2rem;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -142,37 +146,28 @@ export default {
 	
 }
 .tab_mid {
-	width: 20%;
+	width: 2rem;
 	height: 100%;
 	/* background-color:green; */
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	/* border-top-left-radius: 40px;
-	border-top-right-radius: 40px; */
-	/* position: fixed;
-	z-index: 1; */
-	/* border-top:35px;  */
-  /* border-top-right-radius:100px;  */
-  
+	flex-direction: column;
+	align-items: center;
 }
 .border{
-	width: 76px;
-	height: 76px;
+	width: 1.8rem;
+	height: 1.8rem;
+	border-radius: 50%;
 	background-color: white;
-	position: fixed;
-	z-index: 1;
+	margin-top: -0.7rem;
+	border: 0.05714rem solid #f4f4f4;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid #f4f4f4;
-	border-radius: 50%;
-	margin-top: -35px;
 }
 .push{
-	width: 68px;
-	height: 68px;
+	width: 1.73rem;
+	height: 1.73rem;
 	background-color: #ffdd43;
 	border-radius: 50%;
 	display: flex;
@@ -181,21 +176,7 @@ export default {
 	align-items: center;
 }
 .pushText{
-	margin-top: 45px;
-	color: black;
-}
-.tab_right {
-	width: 40%;
-	height: 100%;
-	/* background-color: red; */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.img_box {
-	width: 45px;
-	height: 45px;
-	background-color: greenyellow
+	margin-top: 0.29rem;
 }
 
 </style>

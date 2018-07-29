@@ -30,9 +30,8 @@
       </div>
     </div>
     <div class="back">
-      <div :class="inActived ? 'addActive':'add'" @click="back()">
-        <div class="addRow"></div>
-        <div class="addClown"></div>
+      <div  @click="back()">
+        <img :class="inActived ? 'imgActive':'img'" src="@/assets/add.png" alt="">
       </div>
     </div>
   </div>
@@ -67,28 +66,38 @@ export default {
       }
     },
     mounted(){
-      // console.log(1)
-      this.inActived=true;
-      AppearItemUnderText();
       var that = this;
       setTimeout(function() {
-      that.firstUpText="发布闲置",
-      that.midUpText="淘宝转卖",
-      that.lastUpText="信用速卖"
-      }, 700);
-      function AppearItemUnderText(){
-      console.log(2)
+      that.inActived=true;    
+      }, 200);
+      setTimeout(function() {
+        that.firstUpText="发布闲置",
+        that.midUpText="淘宝转卖",
+        that.lastUpText="信用速卖"
+      }, 1000);
       setTimeout(function() {
         that.firstUnderText="发布租房",
         that.midUnderText="免费送"
-      }, 800);
-    }
+      }, 1200);
     }
     
 }
 </script>
 
 <style scoped>
+.img{
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-top: -0.09rem;
+  transition: linear .2s;
+}
+.imgActive{
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-top: -0.09rem;
+  transform: rotateZ(-45deg);
+  transition: transform linear .2s;
+}
 .container{
   width: 100%;
   height: 100%;
@@ -96,9 +105,11 @@ export default {
 }
 .itemsUp{
   width: 100%;
-  height: 130px;
+  height: 100px;
+  margin-top: 3.2rem;
+  position: absolute;
+  bottom: 7.5rem; 
   /* background-color: red; */
-  margin-top: 310px;
   transition:transform 1.5s;
   transform: translate3d(0,700%,0);
   display: flex;
@@ -106,79 +117,48 @@ export default {
 }
 .itemsUpActive{
   width: 100%;
-  height: 130px;
+  height: 100px;
   /* background-color: red; */
+  position: absolute;
+  bottom: 7.5rem; 
   transition:transform .8s;
   transform: translate3d(0,0,0);
-  margin-top: 310px;
   display: flex;
   flex-direction: row;
 }
 .itemsUnder{
   width: 100%;
-  height: 130px;
+  height: 100px;
+  position: absolute;
+  bottom: 4rem;  
   /* background-color: pink; */
   transition:transform 1.2s;
   transform: translate3d(0,600%,0);
   display: flex;
   flex-direction: row;
-  margin-top: 15px;
 }
 .itemsUnderActive{
   width: 100%;
-  height: 130px;
+  height: 100px;
+  position: absolute;
+  bottom: 4rem;  
   /* background-color: pink; */
   transition:transform .9s;
   transform: translate3d(0,0,0);
   display: flex;
   flex-direction: row;
-  margin-top: 40px;
   
 }
 .back{
-  width: 100%;
-  height: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.add{
-  width: 20px;
-  height: 20px;
-  /* background-color: red; */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  width: 10rem;
+  height: 2.3rem;
   position: fixed;
-  bottom: 54px;
-  transition: transform .2s;
-}
-.addActive{
-  width: 20px;
-  height: 20px;
-  /* background-color: red; */
+  bottom: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 54px;
-  transition: transform .2s;
-  transform: rotateZ(-45deg);
 }
-.addRow{
-	width: 20px;
-	height: 1.5px;
-	background-color: black;
-}
-.addClown{
-	width: 1.5px;
-	height: 20px;
-	background-color: black;
-  position: absolute;
-  z-index: 2;
-}
+
 .itemUpFirst{
   width: 33.333333%;
   height: 100%;
@@ -220,32 +200,32 @@ export default {
   /* background-color: green */
 }
 .firstUpImg{
-  width: 90px;
-  height: 90px;
+  width: 1.9rem;
+  height: 1.9rem;
   background-color: #ffd343;
   border-radius: 50%;
 }
 .midUpImg{
-  width: 90px;
-  height: 90px;
+  width: 1.9rem;
+  height: 1.9rem;
   background-color: #ff821f;
   border-radius: 50%;
 }
 .lastUpImg{
-  width: 90px;
-  height: 90px;
+  width: 1.9rem;
+  height: 1.9rem;
   border-radius: 50%;
   background-color: #fe5533;
 }
 .firstUnderImg{
-  width: 90px;
-  height: 90px;
+  width: 1.9rem;
+  height: 1.9rem;
   border-radius: 50%;
   background-color: #27affc;
 }
 .midUnderImg{
-  width: 90px;
-  height: 90px;
+  width: 1.9rem;
+  height: 1.9rem;
   border-radius: 50%;
   background-color: #1cc472;
 }
