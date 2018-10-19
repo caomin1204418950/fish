@@ -157,6 +157,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  /* background-color: red; */
 }
 
 .itemUpFirst{
